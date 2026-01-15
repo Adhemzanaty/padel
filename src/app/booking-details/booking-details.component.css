@@ -1,0 +1,160 @@
+
+.ourNavP{
+    padding: 10px 120px;
+}
+.firstSection{
+    padding-top: 145px;
+}
+
+.firstSectionDiv{
+    width: 80%;
+    background-color: rgba(0, 15, 51, 0.9);
+    border: 2px solid #000f33;
+    padding: 40px 15px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 100px;
+    transition: all 0.5s;
+}
+
+.firstSectionDiv h1{
+    color: white;
+    padding: 10px;
+    font-weight: 700;
+}
+
+.firstSectionDiv:hover{
+    background-color: #000f33;
+    border-radius: 35px;
+
+}
+.secondSection h2{
+    text-align: center;
+    padding: 10px 0 20px 0;
+} 
+
+
+
+
+
+
+@media all and (max-width : 771px){
+
+    .ourNavP{
+        padding: 10px 30px;
+    }
+
+}
+@media all and (max-width: 577px){
+
+    
+    .firstSectionDiv{
+        width: 90%;
+    }
+}
+
+
+.borderDiv{
+   
+    padding: 10px;
+
+
+}
+.stadiumDiv{
+    width: 100%;
+    border: 2px solid #000f33;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+    /* transition: all 0.5s; */
+
+}
+/* .stadiumDiv:hover{
+    background-color: #000f33;
+    border-radius: 35px;
+
+} */
+.stadiumName{
+    background-color: #000f33;
+    color: white;
+    font-weight: 700;
+    padding: 15px 0 10px 0;
+
+}
+.stadiumAbout{
+    background-color: white;
+    padding: 15px 0 10px 0;
+    border-bottom: 2px solid #000f33 ;
+}
+.stadiumAbout h2{
+    font-size: 18px;
+    color: #000f33;
+    font-weight: 700;
+    padding: 10px 0 10px 0;
+}
+.aboutInfo{
+    padding: 5px 10px;
+    text-align: start;
+}
+.aboutInfo label{
+    padding: 10px;
+    font-weight: 700;
+    color: #000f33;
+
+}
+#button-addon2{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 2px solid #000f33;
+    border-right: none ;
+    color: #000f33;
+    font-weight: 900;
+}
+
+    .btn-outline-secondary:hover{
+    background-color: #000f33;
+    color: white !important;
+    border: #000f33 #000f33;
+  }
+
+.input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating){
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border: 2px solid #000f33 !important;
+    border-left: none ;
+    padding: 10px 10px 10px 0 ;
+    font-size: 16px;
+    font-weight: 900;
+    color: #000f33 !important;
+
+
+
+}
+input:focus {
+    border: 1px solid #000f33 !important;
+    box-shadow: 0 0 1px 2px #000f33 !important;
+    /* border-radius: 15px; */
+}
+input{
+    padding: 10px 10px !important;
+    margin: auto;
+    border: 2px solid #000f33 !important;
+  }
+
+
+  .form-select{
+    border: 2px solid #000f33 !important;
+  
+  }
+  
+  select:focus {
+  border: 2px solid #000f33 !important;
+  box-shadow: 0 0 1px 2px #000f33 !important;
+}
+.privacyPolicy{
+    font-weight: 700;
+}

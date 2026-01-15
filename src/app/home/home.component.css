@@ -1,0 +1,463 @@
+
+  
+  .container1 {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .photo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: round 16s infinite;
+    opacity: 0;
+  }
+  
+  @keyframes round {
+    25% {
+      opacity: 1;
+    }
+    40% {
+      opacity: 0;
+    }
+  }
+  
+  /* حلقة @for تم تحويلها يدوياً */
+  
+  /* للصورة 1 */
+  .photo:nth-child(1) {
+    animation-delay: 20s;
+  }
+  
+  /* للصورة 2 */
+  .photo:nth-child(2) {
+    animation-delay: 16s;
+  }
+  
+  /* للصورة 3 */
+  .photo:nth-child(3) {
+    animation-delay: 12s;
+  }
+  
+  /* للصورة 4 */
+  .photo:nth-child(4) {
+    animation-delay: 8s;
+  }
+    /* للصورة 5 */
+    .photo:nth-child(5) {
+        animation-delay: 4s;
+      }
+      
+      /* للصورة 6 */
+      .photo:nth-child(6) {
+        animation-delay: 0s;
+      }
+  
+  
+  
+  
+  
+
+
+
+
+.ourDarkBg{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+
+
+
+.firstSectionDiv{
+    width: 40%;
+    background-color: rgba(0, 15, 51, 0.6);
+    border: 2px solid #000f33;
+    padding: 40px 15px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 100px;
+    transition: all 0.5s;
+}
+
+.firstSectionDiv h1{
+    color: white;
+    padding: 10px;
+    font-weight: 700;
+}
+
+.firstSectionDiv:hover{
+    background-color: #000f33;
+    border-radius: 35px;
+
+}
+
+
+.ourNavP{
+    padding: 100px 120px;
+}
+
+@media all and (max-width : 771px){
+
+    .ourNavP{
+        padding: 10px 30px;
+    }
+    .sec-dark-bg{
+        text-align: center;
+    }
+    .second-section-first{
+        padding: 20px;
+    }
+    .w-75 {
+        width: 90% !important;
+      }
+
+    
+.firstSectionDiv{
+    width: 90%;
+}
+}
+
+.secondSection h5{
+    text-align: center;
+} 
+.secondSection h2{
+    text-align: center;
+    padding: 10px 0 20px 0;
+} 
+.book-div{
+    padding: 15px 0;
+}
+.book-div img{
+    width: 100%;
+    border-radius:  15px 0 0 15px ;
+}
+.book-div h4{
+    font-size: 1.125rem;
+    padding: 15px 3px 0 0;
+}
+.book-div p{
+    font-size: 0.75rem;
+    /* padding: 10px 3px ; */
+}
+/* .btn-info{
+    background-color: #a855f7;
+    color: white;
+    border: #a855f7;
+    padding: 10px 50px;
+} */
+
+
+@media all and (max-width: 577px){
+
+    .babac{
+        transform: rotate(90deg);
+        position: absolute;
+        right: 265px;
+        top: -282px;
+        /* left: 0; */
+
+    }
+    .home-first button{
+        color: rgb(102 19 153);
+        padding: 15px 10px;
+        margin: 0px;
+    
+    }
+    .book-div h4{
+        font-size: 1rem;
+    }
+}
+
+
+/*************************** second section *************************************/
+
+.second-section{
+
+    padding: 60px 20px 30px 20px;
+}
+.styled-h-second-section{
+    color: #0d6efd;
+    font-size: 13px;
+    font-weight: 400;
+}
+.styled-h-second-section::before{
+    content: "";
+    padding: 1px 3px 0 3px;
+    margin: 0 5px 0 10px;
+    background-color: #0d6efd;
+}
+.second-section-first h3{
+    padding: 0 10px 10px 10px;
+    font-weight: 800;
+}
+.second-section-first{
+    padding: 20px 20px 20px 60px;
+} 
+.second-section-first p{
+    color: gray;
+    font-size: 12px;
+    padding: 0px 10px 10px 10px;
+    line-height: 1.8;
+
+}
+
+.second-section-second{
+    position: relative;
+    height: 500px;
+}
+.child-1{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.child-2{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 80px;
+    top: 230px;
+    border-radius: 20px;
+    z-index: 100;
+    overflow: hidden;
+}
+.child-3{
+    width: 200px;
+    height: 230px;
+    position: absolute;
+    right: 230px;
+    top: 100px;
+    border-radius: 20px;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.img-group img{
+    width: 100%;
+    
+}
+.line-div-img{
+    width: 10px;
+    height: 70px;
+    background-color: #0d6efd;
+    position: absolute;
+    right: 300px;
+    top: 340px;
+    border-radius: 20px;
+    z-index: 10;
+
+}
+@media all and (max-width: 450px){
+
+    .child-1{
+        width: 150px;
+        height: 150px;
+    }
+    .child-2{
+        width: 150px;
+        height: 150px;
+        right: 60px;
+        top: 170px;
+    }
+    .child-3{
+        width: 150px;
+        height: 160px;
+        right: 170px;
+        top: 75px;
+    }
+    .line-div-img{
+        width: 10px;
+        height: 50px;
+        right: 225px;
+        top: 255px;
+    }
+
+    .second-section-second{
+        height: 350px;
+    }
+}
+/*************************** third section *************************************/
+
+.third-section{
+    background-image: url(../../assets/padelBg-6.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.sec-dark-bg{
+    height: 100%;
+    padding: 0 50px;
+    background-color: rgba(0, 15, 51, 0.8);
+    cursor: pointer;
+    transition: all 1s;
+}
+.sec-dark-bg:hover{
+    background-color: rgba(236, 110, 30, 0.8);
+    color: white;
+}
+.sec-dark-bg:hover i{
+    color: white;
+}
+.sec-dark-bg:hover .small-colore::after{
+    color: white;
+}
+
+.sec-dark-bg i{
+    padding: 10px;
+    font-size: 70px;
+    color: #0d6efd;
+    transition: all 1s;
+
+    
+}
+
+.sec-dark-bg h6{
+    padding: 10px 10px 0 10px;
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+}
+.sec-dark-bg p{
+    padding: 0px 10px;
+    font-size: 11px;
+    color: whitesmoke;
+    font-weight: 300;
+}
+.small-colore::after{
+    content: "--";
+    color: #004dff;
+    padding-right: 5px;
+    transition: all 1s;
+
+}
+.sec-dark-bg div{
+    padding: 150px 10px 10px 0px;
+}
+
+
+
+/*************************** 4 section *************************************/
+
+.second-section{
+
+    padding: 60px 20px 30px 20px;
+}
+.styled-h-second-section{
+    color: #0d6efd;
+    font-size: 13px;
+    font-weight: 400;
+}
+.styled-h-second-section::before{
+    content: "";
+    padding: 1px 3px 0 3px;
+    margin: 0 5px 0 10px;
+    background-color: #0d6efd;
+}
+.second-section-first h3{
+    padding: 0 10px 10px 10px;
+    font-weight: 800;
+}
+.second-section-first{
+    padding: 20px 20px 20px 60px;
+}
+.second-section-first p{
+    color: gray;
+    font-size: 12px;
+    padding: 0px 10px 10px 10px;
+    line-height: 1.8;
+
+}
+.email-div h6{
+    padding: 5px 10px 0px 10px;
+    font-weight: 800;
+
+}
+
+.email-div i{
+    background-color: #212e4e;
+    font-size: 30px;
+    padding: 13px ;
+    border-radius: 10px;
+    color: white;
+}
+.email-div{
+    display: flex;
+}
+.email-div div{
+    display: inline-block;
+}
+.child-img img{
+    width: 95%;
+
+}
+.child-img{
+    text-align: center;
+
+}
+/*************************************************/
+
+
+.logoImg{
+    background-color: #44b9ee ;
+}
+.logoImg img{
+width: 55%;
+
+}
+
+.babac2{
+    /* background-image: url(../../assets/pink-gradient.svg); */
+    position: absolute;
+    top: -28px;
+    left: 0px;
+    z-index: 9999;
+}
+
+
+
+
+/*************************************************/
+
+.accordion-item{
+    padding-top: 30px;
+    border: none !important;
+    border-bottom: 1px solid rgb(128, 128, 128, 0.4) !important;
+    border-radius: 0 !important;
+}
+.accordion-button::after {
+    margin-left: 0 !important;
+    margin-right: auto !important ;
+}
+.accordion-button:not(.collapsed) {
+    color:black !important;
+    background-color: transparent !important;
+    box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+}
+.accordion-button:focus{
+    box-shadow: none;
+    
+}
+.accordion-body{
+    color: gray;
+}
+.thirdSection h5{
+    text-align: center;
+} 
+.thirdSection h2{
+    text-align: center;
+    
+} 
+.readingImg{
+    width: 100%;
+    height: 100%;
+}

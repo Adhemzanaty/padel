@@ -1,0 +1,55 @@
+/* تنسيق عام */
+
+.firstSection{
+    padding-top: 124px;
+}
+/* dashboard.component.css */
+.dashboard-container {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+  }
+ .navBg{
+    background-color: #000f33 !important;
+ } 
+ .text-primary{
+    color: #000f33 !important;
+ }
+  .sidebar {
+    background-color: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+    min-height: calc(100vh - 56px);
+    padding-top: 20px;
+  }
+  
+  .nav-link {
+    color: #495057;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .nav-link:hover {
+    background-color: #e9ecef;
+    color: #000f33;
+  }
+  
+  .nav-link.active {
+    background-color: #000f33;
+    color: white;
+  }
+  
+  .card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border: none;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  }

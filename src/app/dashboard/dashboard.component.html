@@ -1,0 +1,623 @@
+<!-- dashboard.component.html -->
+<div class="dashboard-container firstSection">
+    <!-- شريط التنقل العلوي -->
+    <nav class="navbar navbar-expand-lg navbar-dark navBg">
+      <div class="container-fluid">
+        <a class="navbar-brand">
+          <i class="fas fa-tachometer-alt m-2"></i>نظام الإدارة
+        </a>
+        
+        <!-- معلومات المستخدم -->
+        <!-- <div class="d-flex align-items-center">
+          <div class="dropdown">
+            <button class="btn btn-outline-light dropdown-toggle d-flex align-items-center" 
+                    type="button" id="userDropdown" data-bs-toggle="dropdown" 
+                    aria-expanded="false">
+              <i class="fas fa-user-circle m-2"></i>
+              <span>{{user.name}}</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+              <li>
+                <span class="dropdown-item-text">
+                  <i class="fas fa-envelope m-2"></i>{{user.email}}
+                </span>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="logout(); $event.preventDefault()">
+                  <i class="fas fa-sign-out-alt m-2"></i>تسجيل الخروج
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div> -->
+      </div>
+    </nav>
+  
+    <!-- المحتوى الرئيسي -->
+    <div class="container-fluid mt-3">
+      <div class="row">
+        <!-- الشريط الجانبي -->
+        <div class="col-md-2 col-lg-2 sidebar-col">
+          <div class="position-sticky">
+            <!-- <div class="sidebar-header mb-4">
+              <h5 class="text-muted">
+                <i class="fas fa-bars m-2"></i>القائمة الرئيسية
+              </h5>
+            </div> -->
+            
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a class="nav-link d-flex align-items-center" 
+                   ngClass="{'active': currentPage === 'الرئيسية'}" 
+                   (click)="setCurrentPage('الرئيسية')">
+                  <i class="fas fa-home m-2"></i>
+                  <span>الرئيسية</span>
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link d-flex align-items-center" 
+                   ngClass="{'active': currentPage === 'المتجر'}" 
+                   (click)="setCurrentPage('المتجر')">
+                  <i class="fas fa-building m-2"></i>
+                  <span>المتجر</span>
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link d-flex align-items-center" 
+                   ngClass="{'active': currentPage === 'الكافيه'}" 
+                   (click)="setCurrentPage('الكافيه')">
+                  <i class="fas fa-book m-2"></i>
+                  <span>الكافيه</span>
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link d-flex align-items-center" 
+                   ngClass="{'active': currentPage === 'الملاعب'}" 
+                   (click)="setCurrentPage('الملاعب')">
+                  <i class="fas fa-book m-2"></i>
+                  <span>الملاعب</span>
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link d-flex align-items-center" 
+                   ngClass="{'active': currentPage === 'المستخدمين'}" 
+                   (click)="setCurrentPage('المستخدمين')">
+                  <i class="fas fa-users m-2"></i>
+                  <span>المستخدمين</span>
+                </a>
+              </li>
+            </ul>
+            
+            <!-- فاصل -->
+            <hr class="my-4">
+            
+            <!-- قائمة إضافية -->
+            <!-- <div class="additional-links">
+              <h6 class="text-muted mb-3">
+                <i class="fas fa-cog m-2"></i>إعدادات إضافية
+              </h6>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a class="nav-link d-flex align-items-center" 
+                     ngClass="{'active': currentPage === 'أولویتنا'}" 
+                     (click)="setCurrentPage('أولویتنا')">
+                    <i class="fas fa-star m-2"></i>
+                    <span>أولویتنا</span>
+                  </a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a class="nav-link d-flex align-items-center" 
+                     ngClass="{'active': currentPage === 'اتصل بنا'}" 
+                     (click)="setCurrentPage('اتصل بنا')">
+                    <i class="fas fa-phone m-2"></i>
+                    <span>اتصل بنا</span>
+                  </a>
+                </li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+  
+        <!-- المحتوى الرئيسي -->
+        <div class="col-md-10 col-lg-10 content-col">
+          <!-- شريط العنوان والأدوات -->
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="h3 mb-0">
+              <i class="fas fa-file-alt m-2 text-primary"></i>{{currentPage}}
+            </h1>
+            
+            <!-- القائمة المنسدلة للخيارات -->
+            <!-- <div class="dropdown">
+              <button class="btn btn-outline-secondary dropdown-toggle" type="button" 
+                      id="optionsDropdown" data-bs-toggle="dropdown" 
+                      aria-expanded="false">
+                <i class="fas fa-ellipsis-v"></i>
+                <span class="d-none d-md-inline">خيارات</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="optionsDropdown">
+                <li>
+                  <a class="dropdown-item" (click)="setCurrentPage('الرئيسية')">
+                    <i class="fas fa-home m-2"></i>الرئيسية
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" (click)="setCurrentPage('أولویتنا')">
+                    <i class="fas fa-star m-2"></i>أولویتنا
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" (click)="setCurrentPage('اتصل بنا')">
+                    <i class="fas fa-phone m-2"></i>اتصل بنا
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-question-circle m-2"></i>المساعدة
+                  </a>
+                </li>
+              </ul>
+            </div> -->
+          </div>
+  
+
+
+
+
+
+          <!-- محتوى الصفحات -->
+          <div class="page-content">
+            
+            <!-- صفحة الرئيسية -->
+            <div *ngIf="currentPage === 'الرئيسية'">
+              <div class="alert alert-light border mb-4">
+                <h4 class="alert-heading">نظرة عامة على النظام</h4>
+                <p class="mb-0">إحصاءات سريعة عن أداء النظام والمستخدمين.</p>
+              </div>
+              
+              <div class="row">
+                <!-- بطاقة المتجر -->
+                <div class="col-md-4 mb-3">
+                  <div class="card text-white bg-primary h-100">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                          <h5 class="card-title">المتجر</h5>
+                          <h1 class="display-4">{{stats.facilities}}</h1>
+                        </div>
+                        <i class="fas fa-building fa-2x opacity-75"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- بطاقة الكافيه المقبولة -->
+                <div class="col-md-4 mb-3">
+                  <div class="card text-white bg-success h-100">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                          <h5 class="card-title">الكافيه المقبولة</h5>
+                          <h1 class="display-4">{{stats.acceptedStories}}</h1>
+                        </div>
+                        <i class="fas fa-check-circle fa-2x opacity-75"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- بطاقة الكافيه قيد المراجعة -->
+                <div class="col-md-4 mb-3">
+                  <div class="card text-white bg-warning h-100">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                          <h5 class="card-title">قيد المراجعة</h5>
+                          <h1 class="display-4">{{stats.underReview}}</h1>
+                        </div>
+                        <i class="fas fa-clock fa-2x opacity-75"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- بطاقة عدد المستخدمين -->
+                <div class="col-md-6 mb-3">
+                  <div class="card text-white bg-info h-100">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                          <h5 class="card-title">عدد المستخدمين</h5>
+                          <h1 class="display-4">{{stats.totalUsers}}</h1>
+                        </div>
+                        <i class="fas fa-users fa-2x opacity-75"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- بطاقة إجمالي الكافيه -->
+                <div class="col-md-6 mb-3">
+                  <div class="card text-white bg-secondary h-100">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                          <h5 class="card-title">إجمالي عدد الكافيه</h5>
+                          <h1 class="display-4">{{stats.totalStories}}</h1>
+                        </div>
+                        <i class="fas fa-book fa-2x opacity-75"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+
+            </div>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- صفحة المتجر -->
+            <div *ngIf="currentPage === 'المتجر'">
+            
+
+                <div class="m-2 d-flex justify-content-end ">
+                    <button type="button" class="btn btn-success">اضافة منتج <i class="fa-solid fa-plus"></i></button>
+                </div>
+
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">اسم المنتج</th>
+                        <th scope="col">وصف المنتج</th>
+                        <th scope="col">اللون</th>
+                        <th scope="col">المقاس</th>
+                        <th scope="col">السعر</th>
+                        <th scope="col">الصورة الاساسية</th>
+                        <th scope="col">صور الوصف</th>
+                        <th scope="col">حذف</th>
+
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>مضرب بادل</td>
+                        <td>مضرب بادل مصنوع من افضل الخامات مقاس كبير جدا صالح لجميع الاعمار</td>
+                        <td>احمر</td>
+                        <td>10x</td>
+                        <td>150</td>
+                        <td><button type="button" class="btn btn-outline-success">صورة</button></td>
+                        <td><button type="button" class="btn btn-outline-success">صور</button></td>
+                        <td><button type="button" class="btn btn-danger">حذف</button></td>
+
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+
+
+
+            </div>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- صفحة الكافيه -->
+            <div *ngIf="currentPage === 'الكافيه'">
+              <h4 class="mb-3">إدارة الكافيه</h4>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <div class="card">
+                    <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
+                      <span><i class="fas fa-check-circle m-2"></i>الكافيه المقبولة</span>
+                      <span class="badge bg-light text-success fs-5">{{stats.acceptedStories}}</span>
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text">قصص تمت الموافقة عليها وعرضها في النظام.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="card">
+                    <div class="card-header bg-warning d-flex justify-content-between align-items-center">
+                      <span><i class="fas fa-clock m-2"></i>قيد المراجعة</span>
+                      <span class="badge bg-light text-warning fs-5">{{stats.underReview}}</span>
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text">قصص تنتظر مراجعة المدير قبل نشرها.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- إحصائيات إضافية -->
+              <div class="card mt-3">
+                <div class="card-header">
+                  <i class="fas fa-chart-bar m-2"></i>إحصائيات الكافيه
+                </div>
+                <div class="card-body">
+                  <div class="row text-center">
+                    <div class="col-md-6">
+                      <h1 class="display-4 text-info">{{stats.totalStories}}</h1>
+                      <p class="text-muted">إجمالي الكافيه</p>
+                    </div>
+                    <div class="col-md-6">
+                      <h1 class="display-4 text-success">{{stats.acceptedStories}}</h1>
+                      <p class="text-muted">مقبولة</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <!-- صفحة الملاعب -->
+              <div *ngIf="currentPage === 'الملاعب'">
+                <h4 class="mb-3">إدارة الملاعب</h4>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <div class="card">
+                      <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
+                        <span><i class="fas fa-check-circle m-2"></i>الملاعب المقبولة</span>
+                        <span class="badge bg-light text-success fs-5">{{stats.acceptedStories}}</span>
+                      </div>
+                      <div class="card-body">
+                        <p class="card-text">قصص تمت الموافقة عليها وعرضها في النظام.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <div class="card">
+                      <div class="card-header bg-warning d-flex justify-content-between align-items-center">
+                        <span><i class="fas fa-clock m-2"></i>قيد المراجعة</span>
+                        <span class="badge bg-light text-warning fs-5">{{stats.underReview}}</span>
+                      </div>
+                      <div class="card-body">
+                        <p class="card-text">قصص تنتظر مراجعة المدير قبل نشرها.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- إحصائيات إضافية -->
+                <div class="card mt-3">
+                  <div class="card-header">
+                    <i class="fas fa-chart-bar m-2"></i>إحصائيات الملاعب
+                  </div>
+                  <div class="card-body">
+                    <div class="row text-center">
+                      <div class="col-md-6">
+                        <h1 class="display-4 text-info">{{stats.totalStories}}</h1>
+                        <p class="text-muted">إجمالي الملاعب</p>
+                      </div>
+                      <div class="col-md-6">
+                        <h1 class="display-4 text-success">{{stats.acceptedStories}}</h1>
+                        <p class="text-muted">مقبولة</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- صفحة المستخدمين -->
+            <div *ngIf="currentPage === 'المستخدمين'">
+              <h4 class="mb-3">إدارة المستخدمين</h4>
+              <div class="alert alert-info mb-4">
+                <div class="d-flex align-items-center">
+                  <i class="fas fa-users fa-lg me-3"></i>
+                  <div>
+                    إجمالي عدد المستخدمين المسجلين: <strong class="fs-4">{{stats.totalUsers}}</strong>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- قائمة المستخدمين -->
+              <div class="card">
+                <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
+                  <span><i class="fas fa-list m-2"></i>قائمة المستخدمين</span>
+                  <button class="btn btn-light btn-sm">
+                    <i class="fas fa-plus me-1"></i>إضافة مستخدم
+                  </button>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead class="table-light">
+                        <tr>
+                          <th>#</th>
+                          <th>الاسم</th>
+                          <th>البريد الإلكتروني</th>
+                          <th>الدور</th>
+                          <th>الحالة</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>{{user.name}}</td>
+                          <td>{{user.email}}</td>
+                          <td><span class="badge bg-primary">مدير</span></td>
+                          <td><span class="badge bg-success">نشط</span></td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>مستخدم 1</td>
+                          <td>user1example.com</td>
+                          <td><span class="badge bg-secondary">مستخدم</span></td>
+                          <td><span class="badge bg-success">نشط</span></td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>مستخدم 2</td>
+                          <td>user2example.com</td>
+                          <td><span class="badge bg-secondary">مستخدم</span></td>
+                          <td><span class="badge bg-warning">معلق</span></td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>مستخدم 3</td>
+                          <td>user3example.com</td>
+                          <td><span class="badge bg-secondary">مستخدم</span></td>
+                          <td><span class="badge bg-success">نشط</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

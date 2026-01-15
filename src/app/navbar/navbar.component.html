@@ -1,0 +1,77 @@
+ <!-- nav -->
+
+ <nav class="navbar navbar-expand-lg  nav-color  pr-5  text-light ourNavP fixed-top"  [class.navbar-scrolled]="isScrolled"
+                                                                                      [class.navbar-top]="!isScrolled">
+
+    <a class="navbar-brand" href="">
+        <!-- <h2 class="ml-5 ">Brand</h2> -->
+
+        <img src="assets/WK2.png" alt="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="home" routerLinkActive="activeLink" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">الرئيسية</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="bookStadium" routerLinkActive="activeLink" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">احجز ملعب</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="store" routerLinkActive="activeLink" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">المتجر</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="caffe" routerLinkActive="activeLink" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">الكافيه</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="loginEmployee" routerLinkActive="activeLink" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">بوابة الموظفين</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="login" routerLinkActive="activeLink" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">تسجيل دخول</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="dashboard" routerLinkActive="activeLink" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">الاعدادات</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  (click)="scrollToBottom()" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">تواصل معنا</a>
+            </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </ul>
+      
+        <div class="d-flex  social ">
+            <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="nav-link" href="#"><i class="fab fa-tiktok"></i></a>
+            <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <!-- <div class="changeLang">
+            <a class="nav-link" href="">EN</a>
+        </div> -->
+
+    </div>
+</nav>

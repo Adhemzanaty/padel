@@ -1,0 +1,57 @@
+<section class="d-flex justify-content-center align-items-center firstSection" dir="ltr">
+	<div class="darkBg"></div>
+	<div class="container" id="container" [class.right-panel-active]="active">
+		
+		<!-- Mobile Toggle Buttons (Hidden on Desktop) -->
+		<div class="mobile-toggle-container d-md-none">
+			<button class="mobile-toggle-btn" id="mobileSignIn" (click)="sighnIn()">
+				تسجيل الدخول
+			</button>
+			<!-- <button class="mobile-toggle-btn" id="mobileSignUp" (click)="sighnUp()">
+				إنشاء حساب
+			</button> -->
+		</div>
+		
+		<div class="form-container sign-up-container" dir="rtl">
+			<form action="#">
+				<h1>إنشاء حساب</h1>
+				<input class="form-control" type="text" placeholder="الاسم" />
+				<input class="form-control" type="email" placeholder="البريد الإلكتروني" />
+				<input class="form-control" type="password" placeholder="كلمة المرور" />
+				<button class="submit-btn">إنشاء حساب</button>
+				<!-- Back to Sign In Button (Mobile Only) -->
+				<button type="button" class="mobile-back-btn d-md-none" (click)="sighnIn()">
+					العودة لتسجيل الدخول
+				</button>
+			</form>
+		</div>
+		
+		<div class="form-container sign-in-container" dir="rtl">
+			<form action="#">
+				<h1 class="py-3">تسجيل الدخول</h1>
+                <input class="form-control" type="number" placeholder="رقم الجوال 05xxxxxxxx" />
+				<!-- <a href="#" class="forgot-password">نسيت كلمة المرور ؟</a> -->
+				<button class="submit-btn">تسجيل الدخول</button>
+				<!-- Back to Sign Up Button (Mobile Only) -->
+				<!-- <button type="button" class="mobile-back-btn d-md-none" (click)="sighnUp()">
+					العودة لإنشاء حساب
+				</button> -->
+			</form>
+		</div>
+		
+		<div class="overlay-container d-none d-md-block">
+			<div class="overlay">
+				<div class="overlay-panel overlay-left">
+					<h1>!مرحبًا بعودتك</h1>
+					<p>لتسجيل الدخول، يرجى استخدام بياناتك الشخصية</p>
+					<button class="ghost" id="signIn" (click)="sighnIn()">تسجيل الدخول</button>
+				</div>
+				<div class="overlay-panel overlay-right">
+					<h1>مرحبًا</h1>
+					<p>اذا كنت موظف سجل دخولك الان</p>
+					<!-- <button class="ghost" id="signUp" (click)="sighnUp()">إنشاء حساب</button> -->
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

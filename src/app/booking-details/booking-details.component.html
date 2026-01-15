@@ -1,0 +1,219 @@
+<section class="firstSection">
+    <div class="secondSection ourNavP">
+
+
+        <h2>
+            تفاصيل الحجز
+        </h2>
+
+
+
+        <div class="row align-items-stretch">
+
+            <div class="col-xl-4 col-lg-4 col-md-4 borderDiv  col-m ">
+
+                <div class="stadiumDiv text-center h-100 d-flex flex-column">
+
+                    <div class="stadiumName">
+
+                        <h2>
+                            تفاصيل الحجز
+                        </h2>
+
+                    </div>
+
+                    <div class="stadiumAbout">
+
+                        <h2>
+                            الموقع : الاستاد
+                        </h2>
+
+                    </div>
+
+                    <div class="stadiumAbout">
+
+                        <h2>
+                            الملعب : الملعب الاول
+                        </h2>
+
+                    </div>
+
+
+
+                    <div class="stadiumAbout">
+
+                        <h2>
+                            تاريخ الحجز : 10/01/2026
+                        </h2>
+
+                    </div>
+
+
+                    <div class="stadiumAbout">
+
+                        <h2>
+                            وقت الحجز : 10:00
+                        </h2>
+
+                    </div>
+
+
+                    <div class="stadiumAbout" style="border: none;">
+
+                        <h2>
+                            السعر : 100
+                        </h2>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+
+            <div class="col-xl-8 col-lg-8 col-md-8 borderDiv   col-m">
+
+                <div class="stadiumDiv text-center h-100 d-flex flex-column">
+
+                    <div class="stadiumName">
+
+                        <h2>
+                            تفاصيل العميل
+                        </h2>
+
+                    </div>
+
+                    <div class="aboutInfo">
+
+                        <label> رقم الجوال </label>
+                        <form>
+
+                            <div class="dashBorder">
+                                <div class="selectDiv m-1">
+                                    <div class="input-group ">
+                                        <input type="number" class="form-control" placeholder="05xxxxxxxx"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2"
+                                            formControlName="coupon">
+                                        <button class="btn btn-outline-secondary" type="submit"
+                                            id="button-addon2">تحقق</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </form>
+                    </div>
+
+
+
+                    <div class="aboutInfo">
+
+                        <label> الإســــــم </label>
+                        <input type="text" class="form-control" placeholder="الاسم">
+
+                    </div>
+
+                    <div class="aboutInfo">
+
+                        <label> الايميل </label>
+                        <input type="email" class="form-control" placeholder="الايميل">
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col-12 borderDiv   col-m">
+
+                <div class="stadiumDiv text-center h-100 d-flex flex-column">
+
+                    <div class="stadiumName">
+
+                        <h2>
+                            تفاصيل الدفع
+                        </h2>
+
+                    </div>
+
+                    <div class=" row aboutInfo py-3">
+
+                        <div class="col-xl-4 col-lg-4 mb-2">
+                            <select name="select" class="form-select ">
+                                <option value=""> اختر طريقة الدفع</option>
+                                <option value="1">بطاقة ائتمانية</option>
+                                <option value="0">المحفظة</option>
+                                <option value="0">Stc pay</option>
+                                <option value="0">Mada</option>
+                                <option value="0">Apple Pay</option>
+                                
+    
+                            </select>
+                        </div>
+
+                        <div class="col-xl-4 col-lg-4 mb-2">
+                            <form>
+
+                                <div class="dashBorder">
+                                    <div class="selectDiv ">
+                                        <div class="input-group ">
+                                            <input type="text" class="form-control" placeholder="هل لديك كوبون خصم ؟"
+                                                aria-label="Recipient's username" aria-describedby="button-addon2"
+                                                formControlName="coupon">
+                                            <button class="btn btn-outline-secondary" type="submit"
+                                                id="button-addon2">تطبيق</button>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+    
+                            </form>
+                        </div>
+
+                        <div class="col-xl-4 col-lg-4 mb-2">
+                            <button type="button" class="btn btn-info w-100" style="padding: 12px 0 ;">دفع</button>
+
+                        </div>
+
+                        <div class="col-12 text-center">
+                        <h5 class="privacyPolicy"> الرجاء العلم بأنه عند الضغط على زر الدفع فأنت توافق على الشروط والاحكام</h5>
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+<!-- عرض السبينر لما يكون التحميل شغال -->
+<div *ngIf="_APIService.loading$ | async" class="spinner-overlay">
+    <div class="spinner"></div>
+    <p class="loading-text">جاري التحميل...</p>
+</div>
