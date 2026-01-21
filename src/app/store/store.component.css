@@ -142,6 +142,8 @@
     height: 80vh;
     overflow-y: auto;
     overflow-x: hidden;
+    width: 98%;
+
   }
 
   @media all and (max-width : 771px){
@@ -278,6 +280,8 @@
     border-radius: 15px;
     box-shadow: 1px 1px 5px rgb(0, 0, 0,0.3);
     padding: 10px;
+    width: 100%;
+
 }
 
 .buyContent {
@@ -288,7 +292,9 @@
 
 
 .buyContent p{
-    font-size: 18px;
+    font-size: 25px;
+    color: #ec6e1e;
+    font-weight: 700;
     padding: 5px 15px;
 }
 .buyContent ol{
@@ -342,7 +348,20 @@
     width: 90%;
 }
 
-@media all and (max-width : 771px){
+.filterDiv{
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.filterDivLight{
+    background-color: #004dff;
+    color: white;
+
+}
+.filterDiv:hover{
+    background-color: #004dff;
+    color: white;
+}
+@media all and (max-width : 1200px){
 
     .ourNavP{
         padding: 10px 30px;
@@ -400,5 +419,92 @@
     .overflow-all{
         height: 90vh;
       }
+      .filterDiv h5{
+        font-size: 14px;
+    }
+
+}
+.car-icon{
+    width: 70px;
+    height: 70px;
+    background-color: #000f33;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.carShooping i{
+    font-size: 30px;
+    color: #fff;
+    transition: all 0.5s;
+    padding: 7px 0 0 0;
+
+}
+.car-icon:hover .carShooping i {
+    color: #ec6e1e;
+}
+.mainCartDiv{
+    position: relative;
+}
+.car-num{
+    position: absolute;
+    top: -7px;
+    right: 5px;
+    background-color: #dc3545;
+    color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.cartCoffe h6{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px;
+}
+.cartNum{
+    display: flex;
+    justify-content: end;
+}
+.cartNum i{
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #ec6e1e;
+}
+.cartNum h6{
+    padding: 10px;
+    font-size: 20px;
+    
+}
+.bg-cartInfo{
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+
+@media all and (max-width : 577px){
+
+    .cartCoffe h6{
+        font-size: 12px;
+        padding: 8px;
+    }
+    .cartNum i{
+        padding: 8px;
+        font-size: 16px;
+
+    }
+    .cartNum h6{
+        padding: 8px;
+        font-size: 16px;
+        
+    }
 
 }

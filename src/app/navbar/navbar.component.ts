@@ -15,6 +15,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
   countryCode: any;
   currencyCode: any;
   countryies: any;
+  checkLogin: any;
+
   
   isScrolled = false;
   private scrollSubscription: Subscription | null = null;
@@ -27,7 +29,12 @@ export class NavbarComponent implements OnInit, OnDestroy {
     private _APIService: APIService,
     private _Router: Router,
     @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
+  ) {
+
+    _APIService.checkLogin.subscribe( (x) => {
+      this.checkLogin = x;
+    } );
+  }
 
   ngOnInit(): void {
     // الاشتراك في تغيير المسار (route)
@@ -137,5 +144,12 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   scrollToBottom(): void {
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  }
+
+
+
+  logOut(){
+    this._APIService.checkLogin.next(false);
+    this._Router.navigate(['/loginEmployee']);
   }
 }

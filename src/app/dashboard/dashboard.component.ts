@@ -9,6 +9,8 @@ import { CommonModule } from '@angular/common'; // <-- أضف هذا
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
+  singleFileName: string = '';
+  multipleFileCount: number = 0;
   // بيانات المستخدم
   user = {
     name: 'SuperAdmin',
@@ -37,4 +39,14 @@ export class DashboardComponent {
     alert('تم تسجيل الخروج بنجاح');
     // هنا يمكن إضافة منطق تسجيل الخروج الفعلي
   }
+
+
+
+
+
+
+
+
+
+  
 }

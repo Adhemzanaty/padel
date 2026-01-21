@@ -9,6 +9,8 @@ import { Component, ElementRef, ViewChild, AfterViewInit, OnDestroy } from '@ang
 export class StoreComponent implements AfterViewInit, OnDestroy {
   
   @ViewChild('fixedBox') fixedBox!: ElementRef;
+  @ViewChild('fixedBox2') fixedBox2!: ElementRef;
+
   @ViewChild('smallBox') smallBox!: ElementRef;
   @ViewChild('closeBtn') closeBtn!: ElementRef;
   
@@ -23,6 +25,14 @@ export class StoreComponent implements AfterViewInit, OnDestroy {
 
   closeAlert(): void {
     this.fixedBox.nativeElement.style.display = "none";
+  }
+
+  openAlert2(): void {
+    this.fixedBox2.nativeElement.style.display = "flex";
+  }
+
+  closeAlert2(): void {
+    this.fixedBox2.nativeElement.style.display = "none";
   }
 
   ngAfterViewInit(): void {

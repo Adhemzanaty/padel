@@ -345,6 +345,9 @@
 .btn-info{
     width: 90%;
 }
+.selectTable{
+    width: 90%;
+}
 
 @media all and (max-width : 771px){
 
