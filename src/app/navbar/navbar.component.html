@@ -15,35 +15,42 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
+
+
+
+            <li class="nav-item" *ngIf="!checkLogin">
                 <a class="nav-link" routerLink="home" routerLinkActive="activeLink" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">الرئيسية</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="!checkLogin">
                 <a class="nav-link" routerLink="bookStadium" routerLinkActive="activeLink" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">احجز ملعب</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="!checkLogin">
                 <a class="nav-link" routerLink="store" routerLinkActive="activeLink" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">المتجر</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="!checkLogin">
                 <a class="nav-link" routerLink="caffe" routerLinkActive="activeLink" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">الكافيه</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="!checkLogin">
                 <a class="nav-link" routerLink="loginEmployee" routerLinkActive="activeLink" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">بوابة الموظفين</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="!checkLogin">
                 <a class="nav-link" routerLink="login" routerLinkActive="activeLink" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">تسجيل دخول</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="checkLogin">
                 <a class="nav-link" routerLink="dashboard" routerLinkActive="activeLink" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">الاعدادات</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="checkLogin">
+                <a class="nav-link" routerLinkActive="activeLink" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="logOut()">تسجيل الخروج</a>
+            </li>
+            <li class="nav-item" *ngIf="!checkLogin">
                 <a class="nav-link"  (click)="scrollToBottom()" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">تواصل معنا</a>
             </li>

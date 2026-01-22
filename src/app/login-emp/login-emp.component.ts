@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { APIService } from '../api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-emp',
@@ -11,6 +13,11 @@ export class LoginEmpComponent {
 
   active: boolean = false;
   isMobile: boolean = false;
+
+  constructor(public _APIService:APIService , private _Router:Router) {
+
+
+  }  
 
   ngOnInit() {
     this.checkScreenSize();
@@ -52,5 +59,12 @@ export class LoginEmpComponent {
     }
   }
 
+  logIn(){
+
+    this._APIService.checkLogin.next(true);
+    this._Router.navigate(['/dashboard']);
+
+
+  }
 
 }
