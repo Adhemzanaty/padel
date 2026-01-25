@@ -300,6 +300,7 @@
     background-color: rgba(0, 15, 51, 0.8);
     cursor: pointer;
     transition: all 1s;
+    border-bottom: 2px solid white;
 }
 .sec-dark-bg:hover{
     background-color: rgba(236, 110, 30, 0.8);
